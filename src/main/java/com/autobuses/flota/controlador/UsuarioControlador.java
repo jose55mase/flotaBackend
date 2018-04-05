@@ -22,19 +22,13 @@ public class UsuarioControlador {
 	protected ObjectMapper mapper;
 	
 	@RequestMapping(value = "/saveOrUpdate", method = RequestMethod.POST)
-	public Respuesta saveOrUpdate(@RequestBody String userJson)
-			throws JsonParseException, JsonMappingException, IOException {
+	public Respuesta saveOrUpdate(@RequestBody String usuarioJson)
+	throws JsonParseException, JsonMappingException, IOException {
+		
 		this.mapper = new ObjectMapper();
-
-		Usuario usuario = this.mapper.readValue(userJson, Usuario.class);
-
-		if (!this.validate(usuario)) {
-			return new Respuesta(HttpStatus.NOT_ACCEPTABLE.value(),
-					"Los campos obligatorios no estan diligenciados");
-		}
-		this.usuariosServisios.save(usuario);
-
-		return new Respuesta(HttpStatus.OK.value(), "Operacion exitosa");
+		Usuario usuario = this.mapper.readValue(usuarioJson, Usuario.class);
+		return null;
+		
 	}
 	
 }

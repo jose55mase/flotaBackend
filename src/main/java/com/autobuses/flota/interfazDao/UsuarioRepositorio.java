@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public class UsuarioRepositorio{
 	
-	@SuppressWarnings("unchecked")
-	Usuario save(Usuario user) {
-		return null;
-	}
+	//@SuppressWarnings("unchecked")
+//	Usuario save(Usuario usuario); 
+		
+	
 }
