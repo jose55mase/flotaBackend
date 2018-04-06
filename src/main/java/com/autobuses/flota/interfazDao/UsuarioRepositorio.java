@@ -1,13 +1,12 @@
 package com.autobuses.flota.interfazDao;
 
-import com.autobuses.flota.modelo.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.autobuses.flota.modelo.Usuario;
 
-public class UsuarioRepositorio{
-	
-	//@SuppressWarnings("unchecked")
-//	Usuario save(Usuario usuario); 
-		
-	
+
+
+public interface UsuarioRepositorio extends JpaRepository<Usuario, Long> {
+
+	Usuario usaurio(Usuario usuario);
 }

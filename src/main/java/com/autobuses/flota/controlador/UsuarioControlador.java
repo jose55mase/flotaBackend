@@ -27,7 +27,11 @@ public class UsuarioControlador {
 		
 		this.mapper = new ObjectMapper();
 		Usuario usuario = this.mapper.readValue(usuarioJson, Usuario.class);
+		this.usuariosServisios.save(usuario);	
+		
+		
 		return null;
+		
 		
 	}
 	

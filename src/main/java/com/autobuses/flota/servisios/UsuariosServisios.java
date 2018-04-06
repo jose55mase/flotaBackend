@@ -4,6 +4,6 @@ import com.autobuses.flota.modelo.Usuario;
 
 public interface UsuariosServisios {
 	
-	Usuario save(Usuario user);
+	Usuario save(Usuario usuario);
 
 }
